@@ -1,0 +1,39 @@
+// @each $i in (normal, bold, italic){
+
+// .#{$i}{
+//     font-weight: $i;
+// }
+// }
+
+// @each $i in normal, bold, italic{
+
+// .#{$i}{
+//     font-weight: $i;
+// }
+// }
+
+// $list : (normal, bold, italic);
+
+// @each $i in $list{
+// .#{$i}{
+//     font-weight: $i;
+// }
+// }
+
+// $list : ((normal, bold, 10px),(arial, italic, 15px));
+
+// @each $name, $style, $size in $list{
+// .#{$name}{
+//     font-weight: $style;
+//     font-size: $size;
+// }
+// }
+
+$map : (noraml : 12px, bold : 13px, italic : 14px);
+
+@each $i,$f-size in $map{
+    .#{$i}{
+        font-weight: $i;
+        font-size: $f-size;
+    }
+}

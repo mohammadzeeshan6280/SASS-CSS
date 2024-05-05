@@ -1,0 +1,602 @@
+------ Sass Introducation --------		Chapter 1
+1. What is Sass ?
+	Syntactically Awesome Style Sheets
+		          |
+		Extension to CSS	CSS Pre-Processor
+(i) Easy to manage
+(ii) Increase Coding Speed
+(iii) Cross Browser Compatible
+
+2. How to Use Sass File in HTML	
+(i) We Can't Use Sass File in HTML.
+(ii) Browsers Can't Understand Sass Code
+
+Sass ----->	Sass Compiler ------>	CSS
+
+3. Features of Sass :
+(i) Variables
+(ii) Nesting
+(iii) Partials & Imports
+(iv) Mixins
+(v) Extends
+(vi) Operators
+(vii) Operators
+(viii) Functions
+(ix) Conditional Directives
+(x) Loops
+
+4. How to write Sass Code :
+(i) Scss Syntax	Sass Syntax	CSS Syntax
+nav {		nav		nav ul {
+ul{		ul		margin : 0;		
+margin : 0;		margin : 0;		padding : 0;
+padding : 0;	padding : 0;	list-style : none;
+list-style : none;	list-style : none;	}
+}
+
+li { 		li		nav ul { 
+display:inline-block;	display:inline-block;	display:inline-block; }
+}				
+
+a{		a		nav a{
+display : block;	display : block;	display : block;
+padding : 6px 12px;	padding : 6px 12px;	padding : 6px 12px;
+text-decoration:none;	text-decoration:none;	text-decoration:none; }
+}
+}
+
+5. Prior Knowledge before Learning Sass
+(i) HTML
+(ii) CSS
+
+6. Editor for Sass
+(i) Notepad
+(ii) Notepad++
+(iii) VS Code
+(iv) Sublime
+(v) Atom
+
+------ Sass Variables --------	Chapter 2
+1. Sass Variables
+body{
+	background : red;
+	font-family : arial;
+}
+h1{
+	color: red;
+	font-size : 20px;
+}
+span{
+	color: red;
+}
+
+2. Variables
+(i) $primary-color : red;
+
+------ Sass Nesting--------	Chapter 3
+nav ul {				nav { ul {				 ul {
+  margin: 5px;			  margin: 5px;
+  padding: 10px;			 padding: 10px;
+  list-style: none; 			 list-style: none; 
+}				}
+nav li {				 li {
+  display: inline-block; 		display: inline-block; }
+}
+
+nav a {				a {
+  display: block;			display: block;
+  padding: 6px 12px;			padding: 6px 12px;
+  text-decoration: none; 		text-decoration: none;
+}				}
+				}
+
+------ Sass Partials & Import --------	Chapter 4
+1. Sass Partials & Import
+
+(i)	@import "header"	------>	Header	_header.scss
+(ii)	@import "content"	------>	Content
+(iii)	@import "sidebar"	------>	Sidebar
+(iv)	@import "footer"	------>	Footer	
+	main.css
+
+------ Sass Mixins --------	Chapter 5
+1. Sass Mixins 
+	 CSS File
+.abc {
+-webkit-border-radius : 5px;
+-moz-border-radius : 5px;
+border-radius : 5px;
+}
+
+.xyz {
+-webkit-border-radius : 10px;
+-moz-border-radius : 10px;
+border-radius : 10px;
+}
+
+2. Sass Mixins 
+@mixin bd-radius($value){
+-webkit-border-radius : 10px;
+-moz-border-radius : 10px;
+border-radius : 10px;
+}
+
+.abc{
+@include bd-radius(5px)
+}
+
+.xyz{
+@include bd-radius(10px)
+}
+
+------ Sass Extends --------	Chapter 6
+1. Sass Extends
+.abc{
+color : red;
+font-size : 5px;
+line-height : 5px;
+text-transform : uppercase;
+}
+
+.xyz{
+color : green;
+font-size : 5px;
+line-height : 5px;
+text-transform : uppercase;
+}
+
+.efg{
+color : blue;
+font-size : 5px;
+line-height : 5px;
+text-transform : uppercase;
+}
+
+(ii) Sass File
+.abc{
+color : red;
+font-size : 5px;
+line-height : 5px;
+text-transform : uppercase;
+}
+
+.xyz{
+color : green;
+@extend .abc;
+}
+
+.efg{
+color : blue;
+@extend .abc;
+}
+
+(iii) CSS File
+.abc, .xyz, .efg{
+color : red;
+font-size : 5px;
+line-height : 5px;
+text-transform : uppercase;
+}
+
+.xyz{
+color : green;
+}
+
+.efg{
+color : blue;
+}
+
+2. Sass Extends with Placeholders
+%abc{
+color : red;
+font-size : 5px;
+line-height : 5px;
+text-transform : uppercase;
+}
+
+.xyz{
+color : green;
+@extend %abc;
+}
+
+.efg{
+color : blue;
+@extend %abc;
+}
+
+------ Sass Operators --------	Chapter 7
+1. Type of Operators in Sass
+(i) Equality
+(ii) Relational
+(iii) Numeric
+(iv) String
+(v) Boolean
+
+2. Equality & Relational Operators
+Equality Operators		Relational Operators
+==	Equal to		<	Less than
+!=	Not Equal to	>	Greater than
+True / False		<=	Less than Equal to
+if() function		>=	Greater than Equal to
+
+3. Boolean Operators in Saas
+(i) and --> if both conditions are true then TRUE else False
+(ii) or --> if either conditions are true then TRUE else False
+(iii) not --> Returns the opposite value
+
+	True / False	Condition 1 or Conditon 2
+			10px == 20px or arial == "arial"
+
+
+------ Sass Operators - II --------	Chapter 8
+1. String & Numberic Operators :
+(i) String Operators			Numeric Operators
++	Concatenation		+	Addition
+10 + px ------> 10px			-	Subtraction
+				*	Multipication
+				/	Divison
+				%	Modulas or Remainder
+
+
+------ Sass Interpolation --------	Chapter 9
+1. Interpolation in Sass		
+String Concatenation
+ 10 + px -------> 10px
+margin- + $position : 20px;
+
+.icon- + $name{
+
+}
+
+#{ }
+
+margin-#{position} : 20px;
+.icon-#{$name}{
+
+}
+
+
+------ Sass Functions --------	Chapter 10
+1. Sass Functions
+(i) @function function-name($value){
+	@return ($value / 2) + px;
+	
+	}
+
+.half-column{
+	width : function-name(1000);
+}
+
+Half		Half
+1/3	1/3	1/3
+
+
+------ Sass Number Functions --------	Chapter 11
+1. Inbuild Functions of Sass
+(i) Numbers
+(ii) Strings
+(iii) Colors
+(iv) Lists
+(v) Selectors
+(vi) Introspection
+
+2. Number Functions of Sass
+(i) abs()
+(ii) ceil()
+(iii) floor()
+(iv) round()
+(v) max()
+(vi) min()
+(vii) comparable()
+(viii)  percentage()
+(ix) random()
+(x) unit()
+(xi) unitless
+
+
+------ Sass String Functions --------	Chapter 12
+(i) quote()
+(ii) str-index()
+(iii) str-insert()
+(iv) str-length()
+(v) str-slice()
+(vi) to-upper-case()
+(vii) to-lower-case()
+(viii) unique-id()
+(ix) unquote()
+
+------ Sass Colors Functions --------	Chapter 13
+(i) lighten()
+(ii) darken()
+(iii) adjust-hue()
+(iv) saturate()
+(v) desaturate()
+(vi) mix()
+(vii) transparentize()
+
+------ Sass List Functions --------	Chapter 14
+1. List in Sass
+(i) $list : 10px 20px 30px;
+(ii) $list : 10px,20px,30px;
+(iii) $list : [10px 20px 30px];
+
+2. List Functions of Sass
+(i) length()
+(ii) nth()
+(iii) set-nth()
+(iv) join()
+(v) append()
+(vi) zip()
+(vii) index()
+(viii) list-separator()
+(ix) is-bracketed()
+
+------ Sass Selector Functions --------	Chapter 15
+1. Selectors in Sass
+.abc a{
+width : 100px
+height : 50px
+}
+
+2. Selector Function of Sas
+(i) selector-nest
+(ii) selector-append
+(iii) selector-replace
+(iv) is-superselector
+(v) simple-selectors
+(vi) selector-unify
+(vii) selector-extend
+
+------ Sass Map Functions --------	Chapter 16
+1. Map in Sass
+	$list : 10px 20px 30px;
+$map : ("regular" : 400, "medium" : 500);
+$map : ("red" : #ff0000, "green" : #00ff00);
+
+2. Map Functions of Sas
+(i) map-get()
+(ii) map-merge()
+(iii) map-remove()
+(iv) map-keys()
+(v) map-values()
+(vi) map-has-key()
+
+------ Sass Introspection Functions --------	Chapter 17
+1. Introspection Functions of Sass
+(i) variable-exists()
+(ii) global-variable-exists()
+(iii) mixin-exists()
+(iv) function-exists()
+(v) type-of()
+(vi) inspect()
+
+------ Sass @content Directive --------	Chapter 18
+1. Sass Mixins			CSS File
+@mixin bd-radius($value){		.abc{
+-webkit-border-radius : $value;			-webkit-border-radius : 5px;
+-moz-border-radius : $value;			-moz-border-radius : 5px;
+border-radius : $value;			border-radius : 5px;
+}					}
+
+.abc{
+@include bd-radius(5px)			@content
+}
+
+2. Sass @Content Directive :
+@mixin bd-radius($value){		CSS File
+-webkit-border-radius : $value;		.abc{		
+-moz-border-radius : $value;			-webkit-border-radius : 5px;
+border-radius : $value;			-moz-border-radius : 5px;
+@content;					border-radius : 5px;
+}					border-style : dashed;
+				}
+.abc{
+@include bd-radius(5px){
+border-style : dashed;
+};
+}
+
+------ Sass @media & @at-root Directives --------	Chapter 19
+1. Sass @media Directives
+.container{
+	width : 1100px;
+	margin : 0 auto;
+	}
+
+@media screen and (max-width : 1150px){
+	.container{
+		width : 900px;
+		}
+	}
+
+2. Sass Nesting
+.parent {			.parent {
+color : red;			color : red;
+				}
+
+.child{			.parent .child{
+width : 100%;			width : 100%;
+				}
+a{			.parent .child a{
+color : red;			color : red;
+}				}
+}			
+}			@at-root
+
+------ Sass @if & @else Directives  --------	Chapter 20
+1. Control Directives of Sass :
+(i) @if and @else
+(ii) @for
+(iii) @each
+(iv) while
+
+(i) @if condition of Sass
+if ------> Conditions --------> False ------> Out
+	|
+	True
+	|
+	Statement
+
+@if <Condition True>{
+	Statement
+	}
+
+	$test : 3;
+
+	p{
+	@if $test < 5{
+		color : red;
+		}
+	}
+
+(ii) @else condition of Sass
+if ------> Conditions --------> False ------> Statement 2
+	|
+	True
+	|
+	Statement
+
+@if <Condition True>{
+	Statement for true case
+	} @else {
+		Statement for false case
+		}
+
+	$test : 3;
+
+	p{
+	@if $test < 5{
+		color : red;
+		} @else {
+		color : blue;
+		}
+	}
+
+------ Sass @for Directive  --------	Chapter 21
+1. Control Directives of Sass :
+(i) @if and @else
+(ii) @for
+(iii) @each
+(iv) while
+
+2. @for Loop Directive Syntax
+	@for <var> from <Start> through <end> {
+		<Statement>
+	}
+
+@for $i from 1 through 3 {
+	.list-#{$i} {
+	width : 100px * $i;
+	}
+}
+
+.list-1{
+width : 100px;
+}
+
+.list-2{
+width : 200px;
+}
+
+.list-3{
+width : 300px;
+}
+
+------ Sass @each Directive  --------	Chapter 22
+1. Control Directives of Sass :
+(i) @if and @else
+(ii) @for
+(iii) @each
+(iv) while
+
+
+2. @each Loop Directive Syntax
+	@for <var> in<list or map> {
+		<Statement>
+	}
+
+@each $i in (normal,bold,italic) {
+	.#{$i} {
+	font-weight : $i;
+	}
+}
+
+.normal{
+font-weight : normal;
+}
+
+.bold{
+font-weight : bold;
+}
+
+.italic{
+font-weight : italic;
+}
+
+3. 3 Type of @each Loop Directive
+(i) @each with simple list
+(ii) Multiple assignments (multi-dimensional list)
+(iii) Multiple Assignment with Maps
+
+
+------ Sass @while Directive  --------	Chapter 23
+1. Control Directives of Sass :
+(i) @if and @else
+(ii) @for
+(iii) @each
+(iv) while
+
+2. @While Loop Directive Steps :
+		Initialization
+		    |	Fa;se
+		Condition ------------> Out of Loop
+		    |
+		True
+		    |
+		Statement
+		    |
+	Increment / Decrement
+
+3. @while Loop Directive Syntax :
+	@while (condition){
+		<Statement>
+		}
+
+$i = 10;
+@while $i <=30 {
+	.pad-#{$i} {
+		padding-left : 1px * $i;
+		}
+	$i : $i + 10;
+}
+
+.pad-10{
+padding-left : 10px;
+}
+
+.pad-20{
+padding-left : 20px;
+}
+
+.pad-30{
+padding-left : 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				

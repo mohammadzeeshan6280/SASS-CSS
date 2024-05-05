@@ -1,0 +1,47 @@
+// $selector : selector-nest("ul", "li");
+
+// $selector : selector-nest(".abc, .xyz", "p");
+
+// $selector : selector-nest(".abc", "&:hover");
+
+// $selector : selector-nest(".abc", "&_xyz");
+
+// $selector : selector-append(".a",".active");
+
+// $selector : selector-append(".abc","_copy");
+
+// $selector : selector-append(".abc","_copy, _image");
+
+// $selector : selector-replace("a.abc",".abc", ".link");
+
+// $selector : selector-replace("a.abc","h1", "h2");
+
+// $selector : selector-replace(".abc .info",".info", ".xyz");
+
+// $selector : selector-replace(".abc .info",".info", ".xyz li");
+
+// $selector : is-superselector("a", "a.active");
+
+// $selector : is-superselector("a.active", "a");
+
+// $selector : is-superselector("a", "nav a");
+
+// $selector : is-superselector("nav a", "a");
+
+// $selector : simple-selectors("a.abc");
+
+// $selector : selector-unify("a", ".active");
+
+// $selector : selector-unify("a.active", "a.disable");
+
+// $selector : selector-unify(".active a", "main a");
+
+// $selector : selector-extend("a.disable", "a", ".link");
+
+// $selector : selector-extend("a.disable", "h1", "h2");
+
+$selector : selector-extend(".abc .info", ".info", ".content nav.sidebar");
+
+#{$selector}{
+    width: 10px;
+}

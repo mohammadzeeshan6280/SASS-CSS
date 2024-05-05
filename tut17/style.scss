@@ -1,0 +1,40 @@
+$num : 10px;
+$char : "Arial";
+$list : 10px 20px 30px;
+$map : ("regular" : 400, "medium" : 500);
+
+@mixin border-radius{
+border-radius: 6px;
+}
+
+@function add($a, $b){
+    @return $a + $b;
+}
+
+.test{
+    // $num : 10px;
+
+
+    // padding: variable-exists(list);
+
+    // padding: variable-exists(listing);
+
+    // padding: global-variable-exists(char);
+
+    // padding: mixin-exists(char);
+
+    // padding: mixin-exists(border-radius);
+
+    // padding: function-exists(border-radius);
+
+    // padding: function-exists(add); 
+
+    // padding: type-of($num); 
+    
+    // padding: type-of($char); 
+
+    // padding: inspect($char); 
+
+    padding: inspect(null); 
+}
+

@@ -1,0 +1,35 @@
+#header{
+    background: $main-color;
+    height: 80px;
+    color: white
+}
+
+#header h2{
+padding: 25px 0 0 40px;
+}
+
+#menu{
+    background: green;
+    border: 1px solid $border-color;
+
+    ul{
+        margin: 0;
+        padding: 0;
+         
+        
+        li{
+            display: inline-block;
+        }
+    }
+
+    a{
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: black;
+
+       &:hover{
+            background: $main-color;
+        }
+    }
+}

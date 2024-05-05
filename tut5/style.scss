@@ -1,0 +1,60 @@
+// @mixin bd-radius() {
+//   -webkit-border-radius: 5px;
+//   -moz-border-radius: 5px;
+//   border-radius: 5px;
+// }
+
+// @mixin bd-radius($value) {
+//   -webkit-border-radius: $value;
+//   -moz-border-radius: $value;
+//   border-radius: $value;
+// }
+
+@mixin bd-radius($value : 5px) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin box-shadow($top, $left, $blur, $color){
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 18px/24px arial;
+}
+
+div {
+  margin: 0 0 15px 15px;
+}
+#first {
+  width: 100px;
+  height: 100px;
+  background: blue;
+//   @include bd-radius(50px);
+  @include bd-radius();
+  @include box-shadow(3px,3px ,0 , black)
+}
+
+#second {
+  width: 350px;
+  height: 180px;
+  background: greenyellow;
+  @include bd-radius(10px);
+  @include box-shadow(-3px,-3px ,0 , red)
+}
+
+#third {
+  width: 400px;
+  height: 200px;
+  background: plum;
+  @include bd-radius(20px);
+  @include box-shadow(3px,3px ,0 , yellow)
+}

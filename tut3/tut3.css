@@ -1,0 +1,66 @@
+* {
+  margin: 0; }
+
+body {
+  background: #3f35c7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+#wrapper {
+  border: 1px solid black;
+  width: 1000px;
+  background: #ffff;
+  margin: 0 auto; }
+
+#header {
+  background: red;
+  height: 80px;
+  color: white; }
+
+#header h2 {
+  padding: 25px 0 0 40px; }
+
+#menu {
+  background: green;
+  border: 1px solid black; }
+  #menu ul {
+    margin: 0;
+    padding: 0; }
+    #menu ul li {
+      display: inline-block; }
+  #menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black; }
+    #menu a:hover {
+      background: red; }
+
+#content {
+  width: 800px;
+  padding: 15px;
+  float: left;
+  box-sizing: border-box; }
+  #content p {
+    padding-bottom: 20px; }
+
+#sidebar {
+  background: lightsalmon;
+  width: 200px;
+  height: 350px;
+  float: right;
+  padding: 25px 0px; }
+  #sidebar a {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px; }
+    #sidebar a:hover {
+      color: red; }
+
+#footer {
+  background: red;
+  clear: both;
+  padding: 5px 10px;
+  text-align: right;
+  color: #fff; }
+
+/*# sourceMappingURL=tut3.css.map */

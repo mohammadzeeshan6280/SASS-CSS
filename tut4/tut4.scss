@@ -1,0 +1,29 @@
+@import "variable";
+@import "header";
+@import "content";
+@import "sidebar";
+@import "footer";
+
+*{
+    margin: 0;
+}
+body{
+    
+    background: #3f35c7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#wrapper{
+    border: 1px solid $border-color;
+    width: 1000px;
+    background: #ffff;
+    margin: 0 auto;
+   
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+// .abc{
+//     padding: 10px == 10px;
+// }
+
+// .abc{
+//     padding: 10px == 10em;
+// }
+
+// .abc{
+//     padding: 10px != 20px;
+// }
+
+// .abc{
+//     padding : arial == 'arial';
+// }
+
+// .abc{
+//     padding : (5px 7px 10px) == (4px 7px 10px);
+// }
+
+// .abc{
+//     padding : (5px 7px 10px) != (4px 7px 10px);
+// }
+
+// .abc{
+//     padding : 100 > 20;
+// }
+
+// .abc{
+//     padding : 10px > 20px;
+// }
+
+// .abc{
+//     padding : 1000ms >= 1s;
+// }
+
+// .abc{
+//     padding : 1000px >= 2s;
+// }
+// .abc{
+//     padding : 1000ms >= 2s;
+// }
+
+// .abc{
+//     padding : arial == 'arial' and 10px == 10;
+// }
+
+// .abc{
+//     padding : arial == 'arial' and 10px == 20;
+// }
+
+// .abc{
+//     padding : arial == 'arial' or 10px == 20;
+// }
+
+// .abc{
+//     padding : arial == 'arials' or 10px == 20;
+// }
+
+// .abc{
+//     padding : not 10 == 10px;
+// }
+
+.abc{
+    padding : not 10 != 10px;
+}

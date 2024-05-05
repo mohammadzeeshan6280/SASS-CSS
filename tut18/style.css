@@ -1,0 +1,14 @@
+body {
+  background: grey; }
+
+@media screen and (max-width: 1300px) {
+  body {
+    background: yellow; } }
+@media screen and (max-width: 1000px) {
+  body {
+    background: red; } }
+@media screen and (max-width: 700px) {
+  body {
+    background: green; } }
+
+/*# sourceMappingURL=style.css.map */

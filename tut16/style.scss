@@ -1,0 +1,29 @@
+$font-weights : ("regular" : 400, "medium" : 500, "bold" : 700);
+
+$light-weights : ("lightest" : 100, "light" : 300);
+
+// $merge : map-merge($font-weights, $light-weights);
+
+$mr : map-remove($font-weights, "regular");
+
+.test{
+    // font-weight: map-get($font-weights, "bold");
+
+    // font-weight: map-get($font-weights, "bolder");
+
+    // font-weight: map-keys($font-weights);
+
+    // font-weight: map-values($font-weights);
+
+    // font-weight :map-keys($merge) ;
+
+    // font-weight :map-values($merge) ;
+
+    // font-weight :map-values($mr) ;
+
+    // font-weight :map-has-key($font-weights, "bold") ;
+
+    // font-weight :map-has-key($font-weights, "bolder") ;
+
+    font-weight : nth($font-weights,2) ;
+}

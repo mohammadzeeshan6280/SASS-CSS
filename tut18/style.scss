@@ -1,0 +1,100 @@
+// @mixin bd-radius($value){
+//     -webkit-border-radius : $value;
+//     -moz-border-radius : $value;
+//     border-radius : $value;
+// }
+
+// @mixin bd-radius($value){
+//     -webkit-border-radius : $value;
+//     -moz-border-radius : $value;
+//     border-radius : $value;
+//     @content;
+// }
+
+// .abc{
+//     // @include bd-radius(5px);
+
+//     @include bd-radius(5px){
+//         border-style: dashed;
+//     }
+// }
+
+// @mixin test{
+//     @content;
+// }
+
+// @mixin test{
+//    #menu{
+//     @content;
+//    }
+// }
+
+// @include test(){
+//     .block{
+//         color: green;
+//     }
+// }
+
+// @mixin hover{
+//     &:hover{
+//         @content;
+//     }
+// }
+
+// .button{
+//     border: 1px solid red;
+
+//     @include hover{
+//         border-width: 2px;
+//     }
+// }
+
+// body{
+//     background: grey;
+// }
+
+// @media screen and (max-width : 1300px){
+//     body{
+//         background: pink;
+//     }
+// }
+
+// @media screen and (max-width : 1000px){
+//     body{
+//         background: greenyellow;
+//     }
+// }
+
+// @media screen and (max-width : 700px){
+//     body{
+//         background: brown;
+//     }
+// }
+
+body{
+    background: grey;
+}
+
+@mixin media($width){
+    @media screen and (max-width : $width) {
+        @content;
+    }
+}
+
+@include media(1300px){
+    body{
+        background: yellow;
+    }
+}
+
+@include media(1000px){
+    body{
+        background: red;
+    }
+}
+
+@include media(700px){
+    body{
+        background: green;
+    }
+}

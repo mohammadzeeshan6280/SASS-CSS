@@ -1,0 +1,56 @@
+$list : 10px 20px 30px; 
+$list1 : 50px 60px 70px; 
+// $list1 : [50px 60px 70px]; 
+// $list : 10px, 20px; 
+
+.test{
+    // padding: length($list: ($list));
+
+    // padding: length($list: (width:10px, height:20px));
+    
+    // padding: nth($list, 2);
+
+    // padding: nth($list, -1);
+
+// padding: nth([list1,list2,list3], 3);
+
+// padding: set-nth($list, 2, 2em);
+
+// padding: set-nth((snas, arial, verdana), 1, Romoto);
+
+// padding: join($list, $list1);
+
+// padding: join(1 2 3 4, 5 6 7);
+
+// padding: join((1 2 3 4) , (5 6 7));
+
+// padding: join((1, 2, 3, 4) , (5, 6, 7));
+
+// padding: join((1, 2, 3, 4) , (5, 6, 7), space);
+
+// padding: join((1, 2, 3, 4) , (5, 6, 7), auto);
+
+// padding: join((1, 2, 3, 4) , (5, 6, 7), comma);
+
+// padding: append($list, 70px 80px, comma)
+
+// padding: append($list, 70px 80px, space)
+
+// padding: append((red, green), blue)
+
+// padding: zip($list, $list1)
+
+// padding: zip((red,green, blue), (10px , 15px, 5px))
+
+// padding: zip(red green blue, 10px , 15px, 5px;
+
+// padding: index($list, 20px);
+
+// padding: index($list, 50px);
+
+// padding: list-separator($list);
+
+padding: is-bracketed($list1);
+
+
+}

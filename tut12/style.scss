@@ -1,0 +1,23 @@
+.test{
+    // font-family: quote($string: (Arial));
+
+    // font-family: unquote($string: ("Arial"));
+    
+    // font-family: unquote($string: (".abc"));
+
+    // font-family: to-upper-case($string: (Arial));
+
+    // font-family: to-lower-case($string: (ARIAL));
+
+    // font-family: str-length($string: (Arial));
+
+    // font-family: str-index("Hello world", "Hello");
+
+    // font-family: str-insert("Hello world", " is", 6);
+
+    // font-family: str-slice("Hello world", 7);
+
+    // font-family: str-slice("Hello world", 7, 10);
+
+    font-family: unique-id();
+}

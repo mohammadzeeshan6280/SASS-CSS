@@ -1,0 +1,26 @@
+// $base-color : hotpink;
+$base-color : green;
+// $base-color : #ad4043;
+
+#first, #second{
+    width: 400px;
+    height: 100px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+
+}
+
+#first{
+    background: $base-color;
+}
+
+#second{
+    // background-color: darken($base-color,50);
+    // background-color: lighten($base-color,50);
+    // background: adjust-hue($base-color,80);
+    // background: saturate($base-color,30);
+    // background: desaturate($base-color,30);
+    // background: mix($base-color,red, 50);
+    // background: transparentize($base-color,0.3);
+    background: blue($base-color);
+}
